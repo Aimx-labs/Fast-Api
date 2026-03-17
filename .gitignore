@@ -1,0 +1,66 @@
+venv/
+.venv/
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+.env
+.vscode/
+.idea/
+*.log
+dist/
+build/
+```
+
+---
+
+### README.md
+
+```markdown
+# Fast-API Project
+
+Este es un proyecto desarrollado con **FastAPI**. Sigue los pasos a continuación para configurar el entorno y ejecutar la aplicación.
+
+## Requisitos Previos
+
+*   Python 3.8 o superior.
+*   Pip (gestor de paquetes de Python).
+*   Entorno virtual (recomendado).
+
+## Instalación
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <url-del-repositorio>
+    cd Fast-Api
+    ```
+
+2.  **Crear y activar un entorno virtual:**
+    *   **Windows:**
+        ```bash
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+    *   **Linux/macOS:**
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+
+3.  **Instalar dependencias:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Configuración
+
+Si el proyecto utiliza variables de entorno, crea un archivo `.env` en la raíz del proyecto y define las variables necesarias (ejemplo: base de datos, claves secretas).
+
+## Ejecución
+
+Para iniciar el servidor de desarrollo (Uvicorn):
+
+```bash
+uvicorn main:app --reload
